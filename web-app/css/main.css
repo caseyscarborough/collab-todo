@@ -2,20 +2,21 @@
 body,
 input, select, textarea {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/* font-family: 'Georgia', 'Helvetica', sans-serif; */
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1.1;
+	line-height: 1.2;
 }
 
 /* BASE LAYOUT */
 
 html {
 	background-color: #ddd;
-	background-image: -moz-linear-gradient(center top, #aaa, #ddd);
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
-	background-image: linear-gradient(top, #aaa, #ddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
+	background-image: -moz-linear-gradient(center top, #666, #aaa);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666), color-stop(1, #aaa));
+	background-image: linear-gradient(top, #666, #aaa);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#666', EndColorStr = '#aaa');
 	background-repeat: no-repeat;
 	height: 100%;
 	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
@@ -42,13 +43,15 @@ body {
 	margin: 0 auto;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
-	   -moz-box-shadow: 0 0 0.3em #255b17;
-	-webkit-box-shadow: 0 0 0.3em #255b17;
-	        box-shadow: 0 0 0.3em #255b17;
+	   -moz-box-shadow: 0 0 0.3em #333;
+	-webkit-box-shadow: 0 0 0.3em #333;
+	        box-shadow: 0 0 0.3em #333;
+	line-height: 1.3em;
 }
 
-#grailsLogo {
-	background-color: #abbf78;
+#logo {
+	background-color: #344e9f;
+	border-bottom: 3px solid #748eef;
 }
 
 /* replace with .no-boxshadow body if you have modernizr available */
@@ -65,7 +68,7 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #48802c;
+	color: #344e9f;
 }
 
 a:hover, a:active {
@@ -73,14 +76,33 @@ a:hover, a:active {
 }
 
 h1 {
-	color: #48802c;
+	color: #344e9f;
 	font-weight: normal;
 	font-size: 1.25em;
-	margin: 0.8em 0 0.3em 0;
+	margin: 0px;
+	padding: 0px;
 }
 
+h2 {
+	margin-top: 1em;
+	margin-bottom: 0.3em;
+	font-size: 1em;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0.25em 0;
+}
+
+
 ul {
-	padding: 0;
+	/* list-style-position: inside; */
+}
+
+li {
+	line-height: 1.3;
+	list-style-position: inside;
+	margin: 0.25em 0;
 }
 
 img {
@@ -89,12 +111,37 @@ img {
 
 /* GENERAL */
 
-#grailsLogo a {
+#logo a {
 	display: inline-block;
 	margin: 1em;
+	text-decoration: none;
 }
 
-.content {
+#logo h1 {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	padding: 0px;
+	text-shadow: 1px 2px 5px #222;
+}
+
+#page {
+	margin: 0px auto;
+	padding: 0px 30px 15px;
+	text-align: justify;
+}
+
+#content {
+	float:left;
+	width:66%;
+	color:#000;	
+	padding: 1em 1.5em 1em;
+}
+
+#sidebar {
+	float:right;
+	width:25%;
+	padding:10px;
 }
 
 .content h1 {
@@ -108,17 +155,18 @@ img {
 }
 
 .footer {
-	background: #abbf78;
-	color: #000;
+	background: #344e9f;
+	color: #fff;
 	clear: both;
 	font-size: 0.8em;
-	margin-top: 1.5em;
+	margin-top: 3em;
 	padding: 1em;
 	min-height: 1em;
+	text-align: center;
 }
 
 .footer a {
-	color: #255b17;
+	color: #fff;
 }
 
 .spinner {
@@ -131,6 +179,23 @@ img {
 	top: 0;
 	text-indent: -9999px;
 }
+
+#topbar {
+	text-align:left;
+	width: 90%;
+	margin: 0px auto;
+	padding: 5px 0;
+}
+#topbar #menu {
+	float: right;
+	width: 240px;
+	text-align: right;
+	font-size: 14px;
+}
+
+#topbar #menu a {
+	padding-left: 10px;
+}	
 
 /* NAVIGATION MENU */
 
