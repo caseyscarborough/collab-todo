@@ -31,7 +31,21 @@ After running the application the application, you will be greeted with the welc
 
 You may then proceed to login using the username: <code>casey</code> and the password: <code>password</code>. After logging in, you can look at, update, delete, or add new Categories, Users, or Todos. Sample data is created when the application is run to give an example of how the application works. More implementations are currently being worked on.
 
-### Credits
+### Prerequisites to Adding New Data
+
+#### Adding Todos
+
+To be able to add Todos, you must already have at least one User and one Category, since Todos have a many-to-one relationship with both Categories and Users. If you do not already have these created you won't be able to create a new Todo.
+
+#### Adding Categories
+
+To add a category, you must already have at least one user, because Categories have a many-to-one relationship with Users.
+
+#### Adding Users
+
+There are no prerequisites to adding users.
+
+#### Credits
 
 This application is loosely based off of the application in the book Beginning Groovy, Grails and Griffon by Vishal Layka.
 
