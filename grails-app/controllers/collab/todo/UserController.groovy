@@ -5,7 +5,7 @@ import org.apache.commons.codec.digest.DigestUtils
 import grails.converters.*
 
 class UserController {
-
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 	
 	def listUsers = {
@@ -43,13 +43,16 @@ class UserController {
             flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
             redirect(action: "list")
             return
+        } else if (session.user.id != id) {
+			flash.message = "You do not have access to view or edit this user."
+			redirect(action: "list")
         }
 
         [userInstance: userInstance]
     }
 
     def edit(Long id) {
-		if(session.user.id == id) {
+		if(session?.user && session.user.id == id) {
 	        def userInstance = User.get(id)
 	        if (!userInstance) {
 	            flash.message = message(code: 'default.not.found.message', args: [message(code: 'user.label', default: 'User'), id])
@@ -80,7 +83,7 @@ class UserController {
                 return
             }
         }
-
+		params.password = User.hashPassword(params.password)
         userInstance.properties = params
 
         if (!userInstance.save(flush: true)) {
@@ -113,27 +116,6 @@ class UserController {
 	
 	def login() {}
 	
-	def handleLogin() {
-		def user = User.findByUserName(params.userName)
-		if(!user) {
-			flash.message = "User not found for username: ${params.userName}"
-			redirect(action:"login", params: [userName: params.userName])
-			return
-		} else {
-			if(user?.password == DigestUtils.shaHex(params.password)) {
-				session.user = user
-				redirect(controller:'user', action:'show', id: user?.id)
-			} else {
-				flash.message = "Incorrect password for username: ${params.userName}"
-				redirect(action: "login", params: [userName: params.userName])
-			}
-		}
-	}
 	
-	def logout() {
-		if(session.user) {
-			session.user = null
-			redirect(action:'login')
-		}
-	}
+	
 }

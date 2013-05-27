@@ -36,7 +36,7 @@
 				<li class="fieldcontain">
 					<span id="createdDate-label" class="property-label"><g:message code="todo.createdDate.label" default="Created Date" /></span>
 					
-						<span class="property-value" aria-labelledby="createdDate-label"><g:formatDate date="${todoInstance?.createdDate}" /></span>
+						<span class="property-value" aria-labelledby="createdDate-label"><g:formatDate format='EEEE, MMMM dd, yyyy' date="${todoInstance?.createdDate}" /></span>
 					
 				</li>
 				</g:if>

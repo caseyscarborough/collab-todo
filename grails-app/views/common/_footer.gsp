@@ -1,1 +1,1 @@
-<span class="copyright">&copy; <a href="caseyscarborough.com">Casey Scarborough</a> - 2013</span>
+<span class="copyright"><a href="http://caseyscarborough.com">&copy; Casey Scarborough - 2013</a></span>

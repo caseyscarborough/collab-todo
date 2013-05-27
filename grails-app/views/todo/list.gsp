@@ -26,7 +26,7 @@
 					
 						<g:sortableColumn property="name" title="${message(code: 'todo.name.label', default: 'Name')}" />
 					
-						<g:sortableColumn property="createdDate" title="${message(code: 'todo.createdDate.label', default: 'Created Date')}" />
+						<g:sortableColumn property="createdDate" title="${message(code: 'todo.createdDate.label', default: 'Created')}" />
 					
 						<g:sortableColumn property="priority" title="${message(code: 'todo.priority.label', default: 'Priority')}" />
 					
@@ -34,30 +34,31 @@
 					
 						<g:sortableColumn property="note" title="${message(code: 'todo.note.label', default: 'Note')}" />
 					
-						<g:sortableColumn property="completedDate" title="${message(code: 'todo.completedDate.label', default: 'Completed Date')}" />
+						<%--<g:sortableColumn property="completedDate" title="${message(code: 'todo.completedDate.label', default: 'Completed Date')}" />
 						
-						<g:sortableColumn property="owner" title="${message(code: 'todo.owner.label', default: 'Owner')}"/> 
+						--%><g:sortableColumn property="owner" title="${message(code: 'todo.owner.label', default: 'Owner')}"/> 
 					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${todoInstanceList}" status="i" var="todoInstance">
-					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-					
+					<g:if test="${todoInstance.owner.toString() == session.user.toString()}">
+					<tr class="row">
 						<td><g:link action="show" id="${todoInstance.id}">${fieldValue(bean: todoInstance, field: "name")}</g:link></td>
 					
-						<td><g:formatDate date="${todoInstance.createdDate}" /></td>
+						<td><g:formatDate format="yyyy-MM-dd" date="${todoInstance.createdDate}" /></td>
 					
 						<td>${fieldValue(bean: todoInstance, field: "priority")}</td>
 					
 						<td>${fieldValue(bean: todoInstance, field: "status")}</td>
 					
 						<td>${fieldValue(bean: todoInstance, field: "note")}</td>
-					
-						<td><g:formatDate date="${todoInstance.completedDate}" /></td>
+
+						<%--<td><g:formatDate format="yyyy-MM-dd" date="${todoInstance.completedDate}" /></td>
 						
-						<td><g:link controller="user" action="show" id="${todoInstance.owner.id}">${fieldValue(bean: todoInstance, field: "owner")}</g:link></td>					
+						--%><td><g:link controller="user" action="show" id="${todoInstance.owner.id}">${fieldValue(bean: todoInstance, field: "owner")}</g:link></td>				
 					</tr>
+					</g:if>	
 				</g:each>
 				</tbody>
 			</table>

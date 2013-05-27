@@ -14,7 +14,7 @@ class User {
 	
     static constraints = {
 		userName(blank:false, unique:true)
-		password(blank:false, password:true, display:false)
+		password(blank:false)
 		firstName(blank:false)
 		lastName(blank:false)
     }
@@ -23,7 +23,7 @@ class User {
 		"$lastName, $firstName"
 	}
 	
-	String hashPassword(String password) {
+	static String hashPassword(String password) {
 		DigestUtils.shaHex(password)
 	}
 }

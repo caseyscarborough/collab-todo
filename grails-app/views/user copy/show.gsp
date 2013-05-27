@@ -5,7 +5,7 @@
 	<head>
 		<meta name="layout" content="main">
 		<g:set var="entityName" value="${message(code: 'user.label', default: 'User')}" />
-		<title><g:message code="default.show.label" args="[entityName]"/> | ${userInstance.userName}</title>
+		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
 		<a href="#show-user" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
@@ -35,27 +35,21 @@
 				<g:if test="${userInstance?.password}">
 				<li class="fieldcontain">
 					<span id="password-label" class="property-label"><g:message code="user.password.label" default="Password" /></span>
-					
-						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${userInstance}" field="password"/></span>
-					
+						<span class="property-value" aria-labelledby="password-label">***********<%--<g:fieldValue bean="${userInstance}" field="password"/>--%></span>
 				</li>
 				</g:if>
 			
 				<g:if test="${userInstance?.firstName}">
 				<li class="fieldcontain">
 					<span id="firstName-label" class="property-label"><g:message code="user.firstName.label" default="First Name" /></span>
-					
 						<span class="property-value" aria-labelledby="firstName-label"><g:fieldValue bean="${userInstance}" field="firstName"/></span>
-					
 				</li>
 				</g:if>
 			
 				<g:if test="${userInstance?.lastName}">
 				<li class="fieldcontain">
 					<span id="lastName-label" class="property-label"><g:message code="user.lastName.label" default="Last Name" /></span>
-					
 						<span class="property-value" aria-labelledby="lastName-label"><g:fieldValue bean="${userInstance}" field="lastName"/></span>
-					
 				</li>
 				</g:if>
 			
@@ -82,7 +76,7 @@
 				</g:if>
 			
 			</ol>
-			<g:if test="${session?.user && (session.user.id == userInstance.id)}">
+			<g:if test="${userInstance.id == session.user.id}">
 			<g:form>
 				<fieldset class="buttons">
 					<g:hiddenField name="id" value="${userInstance?.id}" />
@@ -91,9 +85,6 @@
 				</fieldset>
 			</g:form>
 			</g:if>
-			<g:else>
-				<g:link controller="user" action="login">Login</g:link> as <b>${userInstance.userName}</b> to make changes.
-			</g:else>
 		</div>
 	</body>
 </html>
