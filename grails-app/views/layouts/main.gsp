@@ -14,14 +14,15 @@
 		<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
 		<link rel="stylesheet" href="${resource(dir: 'css', file: 'mobile.css')}" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Archivo+Narrow:400,700' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Patrick+Hand' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Gudea" rel="stylesheet" type="text/css">
+		<link href="http://fonts.googleapis.com/css?family=Rancho" rel="stylesheet" type="text/css">
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
+	
 	<body>
-		<div id="logo" role="banner"><a href="/collab-todo"><h1>Collab-Todo</h1></a></div>
-		<div id="topbar"><g:render template="/common/topbar"/></div>
+		<div id="logo"><a href="/collab-todo"><h1>Collab-Todo</h1></a></div>
+		<g:render template="/common/topbar"/>
 		<div id="content"><g:layoutBody/></div>
 		<div id="sidebar"><g:render template="/common/buddies"/></div>
 		<div class="footer" role="contentinfo"><g:render template="/common/footer"/></div>

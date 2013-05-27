@@ -3,15 +3,14 @@ body,
 input, select, textarea {
 	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
 	/* font-family: 'Georgia', 'Helvetica', sans-serif; */
-	font-family: 'Archivo Narrow', sans-serif;
+	font-family: 'Gudea', sans-serif;
 	font-smooth: always;
 	font-size: 105%;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
-	font-family: 'Patrick Hand', cursive;
-	font-size:3em;
+	font-family: 'Rancho', Georgia, serif;
 }
 
 /* BASE LAYOUT */
@@ -83,7 +82,7 @@ a:hover, a:active {
 h1 {
 	color: #344e9f;
 	font-weight: normal;
-	font-size: 1.6em;
+	font-size: 260%;
 	margin: 0px;
 	padding: 0px;
 }
@@ -126,8 +125,8 @@ img {
 #logo h1 {
 	color: #fff;
 	text-decoration: none;
-	font-size:3em;
-	padding: 0px;
+	font-size: 400%;
+	padding-left: 10px;
 	text-shadow: 1px 2px 5px #222;
 }
 
@@ -139,11 +138,10 @@ img {
 
 #content {
 	float:left;
-	width:60%;
+	width:66%;
 	color:#000;	
 	text-align: justify;
 	padding: 1em 1.5em 1em;
-	min-height: 500px;
 }
 
 #sidebar {
@@ -154,7 +152,7 @@ img {
 
 .content h1 {
 	border-bottom: 1px solid #CCCCCC;
-	margin: 0.8em 1em 0.3em;
+	margin: 0.3em 0em;
 	padding: 0 0.25em;
 }
 
@@ -195,16 +193,23 @@ img {
 	margin: 0px auto;
 	padding: 5px 0;
 }
-#topbar #menu {
+#menu {
 	float: right;
-	width: 240px;
 	text-align: right;
-	font-size: 14px;
+	font-size: 16px;
+	margin-bottom:10px;
 }
 
-#topbar #menu a {
-	padding-left: 10px;
+#menu a {
+	text-decoration: none;
+	padding-right: 20px;
+	margin-top: 10px;
 }	
+
+.title h2 {
+	margin-top: 0px;
+	font-size: 110%;
+}
 
 /* NAVIGATION MENU */
 
@@ -439,7 +444,7 @@ fieldset.embedded legend {
 
 .message {
 	/* background: transparent url(../images/skin/information.png) 0.5em 50% no-repeat; */
-	text-indent: 2.2em;
+	text-indent: 0.5em;
 }
 
 /* form fields with errors */
@@ -474,8 +479,8 @@ input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
 
 table {
 	border-collapse: collapse;
-	width: 100%;
-	margin-bottom: 0.5em;
+	max-width: 100%;
+	margin-bottom: 2em;
 }
 
 tr {

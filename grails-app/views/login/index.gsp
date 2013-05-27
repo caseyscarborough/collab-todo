@@ -14,16 +14,17 @@
 		Welcome to your Todo List. Login below:
 	</p><br>
 	<g:form action="handleLogin" method="post">
-		<span class="nameClear">
-			<label for="login">Username:</label>
-		</span>
-		<g:textField name="userName" value='${params.userName }' /><br><br>
-		<span class="nameClear">
-			<label for="password">Password:</label>
-		</span>
-		<g:passwordField name="password" value='' />
-		<br><br>
-			<g:actionSubmit value="Login" action="handleLogin" />
+		<table>
+		<tr>
+			<td><label for="login">Username:</label></td>
+			<td><g:textField name="userName" value='${params.userName }' /></td>
+		</tr>
+		<tr>
+			<td><label for="password">Password:</label></td>
+			<td><g:passwordField name="password" value='' /></td>
+		<tr>
+		</table>
+		<g:actionSubmit value="Login" action="handleLogin" />
 	</g:form>
 </body>
 </html>
