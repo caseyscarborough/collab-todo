@@ -136,6 +136,7 @@ img {
 	width:66%;
 	color:#000;	
 	padding: 1em 1.5em 1em;
+	min-height: 500px;
 }
 
 #sidebar {
@@ -182,7 +183,7 @@ img {
 
 #topbar {
 	text-align:left;
-	width: 90%;
+	width: 95%;
 	margin: 0px auto;
 	padding: 5px 0;
 }
@@ -348,7 +349,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color: #344e9f;
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;

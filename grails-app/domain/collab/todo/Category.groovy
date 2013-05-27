@@ -12,6 +12,8 @@ class Category {
 	
     static constraints = {
 		name(blank:false)
+		description()
+		user()
     }
 	
 	String toString() {

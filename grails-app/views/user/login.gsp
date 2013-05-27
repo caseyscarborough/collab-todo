@@ -15,9 +15,13 @@
 	</p><br>
 	<g:form action="handleLogin" method="post">
 		<span class="nameClear">
-			<label for="login">Sign in:</label>
+			<label for="login">Username:</label>
 		</span>
-		<g:textField name="userName" value='' />
+		<g:textField name="userName" value='${params.userName }' /><br><br>
+		<span class="nameClear">
+			<label for="password">Password:</label>
+		</span>
+		<g:passwordField name="password" value='' />
 		<br><br>
 			<g:actionSubmit value="Login" action="handleLogin" />
 	</g:form>

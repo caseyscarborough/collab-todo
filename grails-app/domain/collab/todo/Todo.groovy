@@ -8,7 +8,7 @@ class Todo {
 	Date dueDate
 	Date completedDate
 	String priority
-	String status
+	String status = "Started"
 	User owner
 	Category category
 	
