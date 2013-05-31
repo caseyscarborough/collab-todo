@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Collab-Todo by caseyscarborough</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/caseyscarborough/collab-todo">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/caseyscarborough/collab-todo/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/caseyscarborough/collab-todo/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Collab-Todo</h1>
+          <p>A todo application written using the Grails web framework that allows users to create and manage todos, create buddy lists, and assign todos to others.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/caseyscarborough">caseyscarborough</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="collab-todo-web-application" class="anchor" href="#collab-todo-web-application"><span class="octicon octicon-link"></span></a>Collab-Todo Web Application</h1>
+
+<p>This application is a to-do application written in the Grails framework. It allows users to create and manage todos in categories. Users are also able to create buddy lists of other users of the application and can easily assign tasks to other users. It will also include reports and batch emails, along with some other functionality.</p>
+
+<h2>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h2>
+
+<ul>
+<li>Java Development Kit</li>
+<li>Groovy 2.1.3</li>
+<li>Grails 2.2.2</li>
+</ul><h2>
+<a name="running-the-application" class="anchor" href="#running-the-application"><span class="octicon octicon-link"></span></a>Running the Application</h2>
+
+<p>Download the repository as a ZIP archive and extract it or clone the repository, then run the following from the command line:</p>
+
+<pre><code>grails run-app
+</code></pre>
+
+<p>You may also need to run a <code>grails upgrade</code> if you are using a newer version of Grails.</p>
+
+<p>After running the application, navigate to http://localhost:8080/collab-todo in your browser.</p>
+
+<h2>
+<a name="using-the-application" class="anchor" href="#using-the-application"><span class="octicon octicon-link"></span></a>Using the Application</h2>
+
+<p>After running the application the application, you will be greeted with the welcome screen.</p>
+
+<p><img src="https://github.com/caseyscarborough/collab-todo/raw/master/img/main.png" alt="alt text" title="The application's main layout."></p>
+
+<p>You may then proceed to login using the username: <code>casey</code> and the password: <code>password</code>. After logging in, you can look at, update, delete, or add new Categories, Users, or Todos. Sample data is created when the application is run to give an example of how the application works. More implementations are currently being worked on.</p>
+
+<h3>
+<a name="prerequisites-to-adding-new-data" class="anchor" href="#prerequisites-to-adding-new-data"><span class="octicon octicon-link"></span></a>Prerequisites to Adding New Data</h3>
+
+<h4>
+<a name="adding-todos" class="anchor" href="#adding-todos"><span class="octicon octicon-link"></span></a>Adding Todos</h4>
+
+<p>To be able to add Todos, you must already have at least one User and one Category, since Todos have a many-to-one relationship with both Categories and Users. If you do not already have these created you won't be able to create a new Todo.</p>
+
+<h4>
+<a name="adding-categories" class="anchor" href="#adding-categories"><span class="octicon octicon-link"></span></a>Adding Categories</h4>
+
+<p>To add a category, you must already have at least one user, because Categories have a many-to-one relationship with Users.</p>
+
+<h4>
+<a name="adding-users" class="anchor" href="#adding-users"><span class="octicon octicon-link"></span></a>Adding Users</h4>
+
+<p>There are no prerequisites to adding users.</p>
+
+<h4>
+<a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a>Credits</h4>
+
+<p>This application is loosely based off of the application in the book Beginning Groovy, Grails and Griffon by Vishal Layka.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
